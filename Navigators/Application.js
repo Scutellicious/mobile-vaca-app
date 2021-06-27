@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React, {useEffect, useState, FunctionComponent} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 // import { IndexStartupContainer } from '@/Containers'
@@ -17,7 +18,7 @@ const ApplicationNavigator = () => {
     <SafeAreaView>
       <NavigationContainer>
         <StatusBar />
-        <Stack.Navigator headerMode={'none'}>
+        <Stack.Navigator headerMode={'float'}>
           <Stack.Screen
             name="Main"
             component={MainNavigator}

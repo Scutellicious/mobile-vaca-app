@@ -1,6 +1,7 @@
 import React from 'react';
+import {View, Text} from 'react-native';
 import {connect} from 'react-redux';
-import {getRestaurants} from '../store';
+import {setRestaurants} from '../store/restaurants';
 
 export class RestaurantsView extends React.Component {
   componentDidMount() {
@@ -10,15 +11,15 @@ export class RestaurantsView extends React.Component {
   render() {
     const restaurants = this.props.restaurants || [];
     return (
-      <div className="rest">
+      <View className="rest">
         {restaurants.map(rest => {
           return (
-            <div key={rest.id}>
-              <h1>{rest}</h1>
-            </div>
+            <Text key={rest.id}>
+              <Text h3>{rest}</Text>
+            </Text>
           );
         })}
-      </div>
+      </View>
     );
   }
 }
@@ -31,7 +32,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    getRestaurants: () => dispatch(getRestaurants()),
+    getRestaurants: () => dispatch(setRestaurants()),
   };
 };
 

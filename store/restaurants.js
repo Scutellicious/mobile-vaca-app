@@ -1,17 +1,22 @@
 // Action types
-export const GET_RESTAURANTS = 'GET_RESTAURANTS';
+export const SET_RESTAURANTS = 'SET_RESTAURANTS';
 
 // Action creators
-export const getRestaurants = restaurants => ({
-  type: GET_RESTAURANTS,
-  restaurants,
+export const setRestaurants = () => ({
+  type: SET_RESTAURANTS,
 });
 
-// Reducer for products
-export default function (state = [], action) {
+const initialState = [
+  'www.restaurant1.com',
+  'www.restaurant2.com',
+  'www.restaurant3.com',
+];
+
+// Reducer for restaurants
+export default function (state = initialState, action) {
   switch (action.type) {
-    case GET_RESTAURANTS:
-      return action.restaurants;
+    case SET_RESTAURANTS:
+      return [...initialState];
     default:
       return state;
   }
