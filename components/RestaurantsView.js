@@ -12,9 +12,9 @@ export class RestaurantsView extends React.Component {
     const restaurants = this.props.restaurants || [];
     return (
       <View className="rest">
-        {restaurants.map(rest => {
+        {restaurants.map((rest, idx) => {
           return (
-            <Text key={rest.id}>
+            <Text key={idx}>
               <Text h3>{rest}</Text>
             </Text>
           );
