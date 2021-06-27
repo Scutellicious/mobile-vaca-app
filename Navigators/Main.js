@@ -1,7 +1,12 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {RestaurantsView, ActivitiesView, HomeView} from '../components';
+import {
+  RestaurantsView,
+  ActivitiesView,
+  HomeView,
+  MapMyView,
+} from '../components';
 
 const Tab = createBottomTabNavigator();
 //this is the main page
@@ -12,6 +17,7 @@ const MainNavigator = () => {
     <Tab.Navigator>
       <Tab.Screen name="Restaurants" component={RestaurantsView} />
       <Tab.Screen name="Home" component={HomeView} />
+      <Tab.Screen name="Map" component={MapMyView} />
       <Tab.Screen name="Activities" component={ActivitiesView} />
     </Tab.Navigator>
   );

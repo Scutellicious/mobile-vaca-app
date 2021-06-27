@@ -5,6 +5,7 @@ import ViewRestaurants from './ViewRestaurants';
 import ViewActivities from './ViewActivities';
 import RestaurantsView from './RestaurantsView';
 import ActivitiesView from './ActivitiesView';
+import MapMyView from './MapMyView';
 import HomeView from './HomeView';
 
 export {
@@ -16,4 +17,5 @@ export {
   RestaurantsView,
   ActivitiesView,
   HomeView,
+  MapMyView,
 };
