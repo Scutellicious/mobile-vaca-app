@@ -4,6 +4,7 @@ import ViewMap from './ViewMap';
 import ViewRestaurants from './ViewRestaurants';
 import ViewActivities from './ViewActivities';
 import RestaurantsView from './RestaurantsView';
+import ActivitiesView from './ActivitiesView';
 import HomeView from './HomeView';
 
 export {
@@ -13,5 +14,6 @@ export {
   ViewMap,
   ViewActivities,
   RestaurantsView,
+  ActivitiesView,
   HomeView,
 };

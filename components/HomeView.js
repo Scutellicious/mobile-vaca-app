@@ -7,7 +7,6 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -20,7 +19,7 @@ import {
 
 import {ViewRestaurants, Colors, Header, ViewMap, ViewActivities} from './';
 
-const Section = ({children, title}): Node => {
+const Section = ({children, title}) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -46,7 +45,7 @@ const Section = ({children, title}): Node => {
   );
 };
 
-const HomeView: () => Node = () => {
+const HomeView = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -67,6 +66,7 @@ const HomeView: () => Node = () => {
              Edit <Text style={styles.highlight}>App.js</Text> to change this
              screen and then come back to see your edits.
            </Section> */}
+          <Section title="WHAT YOU CAN DO WITH YOUR APP" />
           <Section title="View Your Restaurants">
             <ViewRestaurants />
           </Section>

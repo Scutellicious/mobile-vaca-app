@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
 });
 
 const ViewMap: () => Node = Platform.select({
-  ios: () => <Text>click here to bring up the map</Text>,
+  ios: () => <Text>bring up a map of your current location</Text>,
 });
 
 export default ViewMap;
