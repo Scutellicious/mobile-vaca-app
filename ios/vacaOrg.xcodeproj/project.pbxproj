@@ -14,6 +14,7 @@
 		2F18088B0EC72A50EF38D5F4 /* libPods-vacaOrg-vacaOrgTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 977A729E5CD64AFB5B9D9453 /* libPods-vacaOrg-vacaOrgTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9B435BE64AC4300043D858ED /* libPods-vacaOrg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 342B0AD504C93734FFEB1C60 /* libPods-vacaOrg.a */; };
+		D602FDE2268951600090C358 /* swiftFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602FDE1268951600090C358 /* swiftFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		88F459C529FCD424064382A8 /* Pods-vacaOrg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vacaOrg.release.xcconfig"; path = "Target Support Files/Pods-vacaOrg/Pods-vacaOrg.release.xcconfig"; sourceTree = "<group>"; };
 		977A729E5CD64AFB5B9D9453 /* libPods-vacaOrg-vacaOrgTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-vacaOrg-vacaOrgTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010E931DF66C7ECA70B9C3E /* Pods-vacaOrg-vacaOrgTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vacaOrg-vacaOrgTests.debug.xcconfig"; path = "Target Support Files/Pods-vacaOrg-vacaOrgTests/Pods-vacaOrg-vacaOrgTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D602FDE0268951600090C358 /* vacaOrg-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vacaOrg-Bridging-Header.h"; sourceTree = "<group>"; };
+		D602FDE1268951600090C358 /* swiftFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftFile.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -104,7 +107,6 @@
 				C010E931DF66C7ECA70B9C3E /* Pods-vacaOrg-vacaOrgTests.debug.xcconfig */,
 				745AC15200F34155DECB7BC6 /* Pods-vacaOrg-vacaOrgTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,12 +130,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				D602FDE1268951600090C358 /* swiftFile.swift */,
 				13B07FAE1A68108700A75B9A /* vacaOrg */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* vacaOrgTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				1A22FBC8CC4D67C9E2394924 /* Pods */,
+				D602FDE0268951600090C358 /* vacaOrg-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -413,6 +417,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				D602FDE2268951600090C358 /* swiftFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C010E931DF66C7ECA70B9C3E /* Pods-vacaOrg-vacaOrgTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 745AC15200F34155DECB7BC6 /* Pods-vacaOrg-vacaOrgTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = vacaOrgTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = vacaOrg;
+				SWIFT_OBJC_BRIDGING_HEADER = "vacaOrg-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = vacaOrg;
+				SWIFT_OBJC_BRIDGING_HEADER = "vacaOrg-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

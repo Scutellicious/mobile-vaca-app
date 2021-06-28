@@ -7,9 +7,24 @@ export const setRestaurants = () => ({
 });
 
 const initialState = [
-  'www.restaurant1.com',
-  'www.restaurant2.com',
-  'www.restaurant3.com',
+  {
+    name: 'Pelican and Pig',
+    url: 'https://www.pelicanandpig.com/',
+    latitude: 36.18926,
+    longitude: -86.74633,
+  },
+  {
+    name: 'Whiskey Kitchen',
+    url: 'https://www.mstreetnashville.com/whiskey-kitchen',
+    latitude: 36.15549,
+    longitude: -86.78647,
+  },
+  {
+    name: 'Black Dynasty Ramen',
+    url: 'https://blackdynastyramen.com/',
+    latitude: 36.15234,
+    longitude: -86.83568,
+  },
 ];
 
 // Reducer for restaurants

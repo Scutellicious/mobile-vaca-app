@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Linking} from 'react-native';
 import {connect} from 'react-redux';
 import {setActivities} from '../store/activities';
 
@@ -14,8 +14,8 @@ export class ActivitiesView extends React.Component {
       <View className="act">
         {activities.map((act, idx) => {
           return (
-            <Text key={idx}>
-              <Text h3>{act}</Text>
+            <Text key={idx} onPress={() => Linking.openURL(act.url)}>
+              {act.name}
             </Text>
           );
         })}

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Linking} from 'react-native';
 import {connect} from 'react-redux';
 import {setRestaurants} from '../store/restaurants';
 
@@ -14,8 +14,8 @@ export class RestaurantsView extends React.Component {
       <View className="rest">
         {restaurants.map((rest, idx) => {
           return (
-            <Text key={idx}>
-              <Text h3>{rest}</Text>
+            <Text key={idx} onPress={() => Linking.openURL(rest.url)}>
+              {rest.name}
             </Text>
           );
         })}
