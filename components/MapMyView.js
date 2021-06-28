@@ -1,4 +1,4 @@
-import MapView from 'react-native-maps';
+import MapView, {Marker} from 'react-native-maps';
 import React from 'react';
 import {
   SafeAreaView,
@@ -34,8 +34,9 @@ export default class MapMyView extends React.Component {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
-        showsUserLocation={true}
-      />
+        showsUserLocation={true}>
+        <Marker coordinate={{latitude: 36.162663, longitude: -86.781601}} />
+      </MapView>
     );
   }
 }
