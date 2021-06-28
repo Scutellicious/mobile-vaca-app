@@ -10,20 +10,26 @@ const initialState = [
   {
     name: 'Pelican and Pig',
     url: 'https://www.pelicanandpig.com/',
-    latitude: 36.18926,
-    longitude: -86.74633,
+    geo: {
+      latitude: 36.18926,
+      longitude: -86.74633,
+    },
   },
   {
     name: 'Whiskey Kitchen',
     url: 'https://www.mstreetnashville.com/whiskey-kitchen',
-    latitude: 36.15549,
-    longitude: -86.78647,
+    geo: {
+      latitude: 36.15549,
+      longitude: -86.78647,
+    },
   },
   {
     name: 'Black Dynasty Ramen',
     url: 'https://blackdynastyramen.com/',
-    latitude: 36.15234,
-    longitude: -86.83568,
+    geo: {
+      latitude: 36.15234,
+      longitude: -86.83568,
+    },
   },
 ];
 

@@ -39,7 +39,7 @@ export class ActivitiesView extends React.Component {
             );
           })}
         </View>
-        <MapMyView />
+        <MapMyView activities={activities} />
       </View>
     );
   }

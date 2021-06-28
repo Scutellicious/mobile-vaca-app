@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
 
 export default class MapMyView extends React.Component {
   render() {
+    const pinColor = '#000000';
+    const restaurants = this.props.restaurants || [];
+    const activities = this.props.activities || [];
+
     return (
       <MapView
         style={{flex: 1}}
@@ -35,6 +39,20 @@ export default class MapMyView extends React.Component {
           longitudeDelta: 0.0421,
         }}
         showsUserLocation={true}>
+        {restaurants.length > 0
+          ? restaurants.map((rest, idx) => (
+              <View key={idx}>
+                <Marker coordinate={rest.geo} pinColor={pinColor} />
+              </View>
+            ))
+          : null}
+        {activities.length > 0
+          ? activities.map((act, idx) => (
+              <View key={idx}>
+                <Marker coordinate={act.geo} pinColor={pinColor} />
+              </View>
+            ))
+          : null}
         <Marker coordinate={{latitude: 36.162663, longitude: -86.781601}} />
       </MapView>
     );
