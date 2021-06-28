@@ -29,8 +29,8 @@ export default class MapMyView extends React.Component {
       <MapView
         style={{flex: 1}}
         region={{
-          latitude: 42.882004,
-          longitude: 74.582748,
+          latitude: 36.162663,
+          longitude: -86.781601,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}

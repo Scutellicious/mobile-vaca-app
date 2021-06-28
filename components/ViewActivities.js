@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
 });
 
 const ViewActivities: () => Node = Platform.select({
-  ios: () => <Text>View saved restaurants</Text>,
+  ios: () => <Text>View saved activities</Text>,
 });
 
 export default ViewActivities;
